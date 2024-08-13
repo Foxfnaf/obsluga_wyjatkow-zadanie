@@ -11,19 +11,17 @@ public class Main {
     public static final Scanner INPUT_USER_READER = new Scanner(INPUT_STREAM);
 
     public static void main(String[] args) throws  IOException {
-        String filePath = "";
+        String filePath;
 
-        filePath = askUserForFilePath(filePath, INPUT_USER_READER);
+        filePath = askUserForFilePath(INPUT_USER_READER);
 
         checkIfFileExist(filePath);
         printFileContent(INPUT_USER_READER, filePath);
     }
 
-    public static String askUserForFilePath(String filePath, Scanner fileScanner) {
-
+    public static String askUserForFilePath(Scanner fileScanner) {
         System.out.println("Podaj scieżkę pliku");
-        filePath = fileScanner.nextLine();
-        return filePath;
+        return fileScanner.nextLine();
     }
 
     public static boolean checkIfFileExist(String filePath) {
