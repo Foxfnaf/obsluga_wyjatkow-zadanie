@@ -63,7 +63,7 @@ public class Main {
 
         try {
             fileScanner = new Scanner(inputFile);
-        }catch (FileNotFoundException e){
+        }catch (FileNotFoundException  | NullPointerException exception){
             System.out.println("Podany plik ["+ inputFile +"] nie istnieje");
             return false;
         }
